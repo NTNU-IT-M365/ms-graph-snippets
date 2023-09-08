@@ -2,4 +2,7 @@
 Some useful code snippets for doing common stuff with Microsoft Graph API.
 
 ## Authentication
-[authenticate-managed-identity-in-runbook.ps1](authenticate-managed-identity-in-runbook.ps1)
+- Authenticate a managed identity in a runbook or Azure Function: [Code](authenticate-managed-identity-in-runbook.ps1)
+
+## Permissions
+- Assign Graph API permissions to a managed identity: [Code](graph-api-permission-to-managed-identity.ps1)

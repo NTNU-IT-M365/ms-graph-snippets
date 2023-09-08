@@ -1,8 +1,8 @@
 <#
 .SYNOPSIS
-  This shows hot you can obtain a access token from a managed identity running in a Azure Runbook. 
+  This shows how you can obtain a access token from a managed identity running in a Azure Runbook. 
 .DESCRIPTION
-  This shows hot you can obtain a access token from a managed identity running in a Azure Runbook or Azure Function.
+  This shows how you can obtain a access token from a managed identity running in a Azure Runbook or Azure Function.
   This example uses the Powershell Module 'Microsoft.Graph.Authentication',
 .NOTES
   Author:         Øyvind Nilsen (on@ntnu.no)

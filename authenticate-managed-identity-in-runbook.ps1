@@ -11,17 +11,26 @@
   https://github.com/NTNU-IT-M365/ms-graph-snippets
 #>
 
-# Obtain a Access token
+#
+# Example on how to obtain and use a Microsoft Graph API access token for a managed identity
+#
+
 $resourceURL = "https://graph.microsoft.com/" 
 $response = [System.Text.Encoding]::Default.GetString((Invoke-WebRequest -UseBasicParsing -Uri "$($env:IDENTITY_ENDPOINT)?resource=$resourceURL" -Method 'GET' -Headers @{'X-IDENTITY-HEADER' = "$env:IDENTITY_HEADER"; 'Metadata' = 'True'}).RawContentStream.ToArray()) | ConvertFrom-Json 
+
+#
+# Example on how to use the access token to authenticate using Invoke-RestMethod
+#
 
 # Create a header containing the token
 $headers = @{
     Authorization="$($response.token_type) $($response.access_token)"
 }
 
-# Example on how to use the token with Invoke-RestMethod:
 Invoke-RestMethod -Headers $headers -Uri "https://graph.microsoft.com/v1.0/organization"
 
-# Example on how to use the token with MgGraph:
-Connect-MgGraph -AccessToken $response.access_token
+#
+# Example on authenticate a managed identity with MgGraph
+#
+
+Connect-MgGraph -Identity -NoWelcome

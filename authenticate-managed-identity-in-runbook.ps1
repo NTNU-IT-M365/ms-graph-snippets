@@ -17,7 +17,7 @@ $response = [System.Text.Encoding]::Default.GetString((Invoke-WebRequest -UseBas
 
 # Create a header containing the token
 $headers = @{
-    Authorization="$($responsetoken_type) $($response.access_token)"
+    Authorization="$($response.token_type) $($response.access_token)"
 }
 
 # Example on how to use the token with Invoke-RestMethod:

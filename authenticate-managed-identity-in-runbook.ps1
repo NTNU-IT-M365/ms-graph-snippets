@@ -24,4 +24,4 @@ $headers = @{
 Invoke-RestMethod -Headers $headers -Uri "https://graph.microsoft.com/v1.0/organization"
 
 # Example on how to use the token with MgGraph:
-Connect-MgGraph -AccessToken $accessToken
+Connect-MgGraph -AccessToken $response.access_token

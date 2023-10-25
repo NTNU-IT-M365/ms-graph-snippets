@@ -9,6 +9,6 @@ You can find the object id for your managed identity in the Azure Portal.
 ![How to find the object id](files/automationaccount.png)
 
 ## Assign the permissions
-In the [code](graph-api-permission-to-managed-identity.md), set the '$ManagedIdentityId' variable to the ObjectID for your managed identity.
+In the [code](graph-api-permission-to-managed-identity.ps1), set the '$ManagedIdentityId' variable to the ObjectID for your managed identity.
 
 You must be Global Admin to give permissions.

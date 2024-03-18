@@ -9,7 +9,7 @@
 .LINK
   https://github.com/NTNU-IT-M365/ms-graph-snippets
 #>
-Connect-MgGraph
+Connect-MgGraph -Scopes "Application.ReadWrite.All"
 
 # Get Powershell Graph API Service Principal:
 $GraphId = '00000003-0000-0000-c000-000000000000' # This is a hard coded ID for Powershell Graph API. It is the same for all tenants.

@@ -22,7 +22,8 @@ $APIid = $GraphId #Change this to $SharePointId if you want to assign SharePoint
 $uri = "https://graph.microsoft.com/v1.0/servicePrincipals/?`$filter=AppId eq '${APIid}'"
 $APIprincipal = (Invoke-MgGraphRequest -Uri $uri).value
 
-# Get Managed Identity: Insert the id for your Managed Identity. You can find it in your automation account.
+# Get Managed Identity: Insert the Object ID for your Managed Identity. You can find it in your automation account.
+# N.B. Application ID won't work!
 $ManagedIdentityId = 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa'
 
 # Specify what permission scopes you want to assign:
